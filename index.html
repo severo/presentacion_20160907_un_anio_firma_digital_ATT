@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Buenas prácticas para el desarrollo comunitario de software libre</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown><script type="text/template">
+						## Buenas prácticas para el desarrollo comunitario de software libre
+
+						2do simposio de software libre 2016
+
+						UniFranz - El Alto - Jueves 2 de junio de 2016
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Quién soy
+
+						- Sylvain Lesage
+						- Director de la Agencia para el Desarrollo de la Sociedad de la Información en Bolivia - [ADSIB](http://adsib.gob.bo)
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Desarrollo de software libre
+
+						- Ciclo de vida
+						- Comunidad
+						- Decisiones técnicas y políticas
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Ejemplo práctico para illustrar
+
+						Empezemos un proyecto de sistema, comunitario, y de software libre: "Alertas para anuncios de departamentos"
+
+						- aplicación Android, para:
+						- ver los [últimos anuncios inmobiliarios](http://www.eldiario.net/clasificados/clasificados.php?d=0&r=012590&c=2),
+						- guardar los de interés y poner anotaciones
+						- filtrar para recibir unicamente los anuncios que me interesan
+						- mostrar datos de comparación de precios para anuncios similares
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Ejemplo práctico para illustrar
+
+						Paso por paso, describiremos los elementos a tomar en cuenta para sentar las bases de un proyecto comunitario de calidad.
+
+						No detallaremos nada de arquitectura de software, decisiones técnicas, etc. solamente: el entorno del proyecto.
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Modelo de negocio
+
+						- [dos licencias](https://en.wikipedia.org/wiki/Business_models_for_open-source_software#Dual-licensing): libre y privativa
+						- [corazon libre](https://en.wikipedia.org/wiki/Open_core), extensiones privativas
+						- [venta de soporte](https://en.wikipedia.org/wiki/Business_models_for_open-source_software#Selling_professional_services)
+						- [servicio](https://en.wikipedia.org/wiki/Business_models_for_open-source_software#Selling_software_as_a_service)
+						- comunitario ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Equipo de desarrollo
+
+						- empresa / entidad (catedral)
+						- comunidad ([bazar](https://es.wikipedia.org/wiki/La_catedral_y_el_bazar)) ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Participcación y toma de decisiones
+
+						Definir las reglas en un documento incluido en el código, generalmente [`CONTRIBUTING.md`](https://github.com/georchestra/georchestra/blob/15.12/CONTRIBUTING.md)
+
+						- [dictador benevolente de por vida](https://es.wikipedia.org/wiki/Benevolent_Dictator_for_Life) ✔️
+						- [project steering comittee](https://en.wikipedia.org/wiki/Committee#Steering_committee)
+						- [libre](http://zone.spip.org/trac/spip-zone/wiki/CharteDeFonctionnement)
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Plan de trabajo
+
+						Algunos elementos para definir el rumbo del proyecto:
+
+						- hoja de ruta
+						- "issues" (tareas), agrupadas por [versiones planificadas](https://github.com/georchestra/georchestra/milestones) ✔️
+						- reuniones [IRC](https://www.w3.org/Guide/) o [IRL](https://en.wikipedia.org/wiki/Real_life) ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Licencia
+
+						- tipo MIT
+						- tipo GPL3 ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Publicación del código
+
+						- [github](https://github.com/severo/anuncios), bitbucket, sourceforge ✔️
+						- [gitlab](https://about.gitlab.com/features/#community), [trac](https://trac.edgewall.org/), [openproject](https://www.openproject.org/) auto-alojado
+						- [sitio de descarga](https://www.passwordstore.org/)
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Versionamiento
+
+						- [git](https://git-scm.com/) ✔️
+						- [subversion](https://subversion.apache.org/)
+						- [cpold](https://github.com/malko/cpold)
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Gestión de las tareas y bugs
+
+						- [github](https://github.com/severo/anuncios/issues) ✔️
+						- [gitlab](https://about.gitlab.com/features/#community), [trac](https://trac.edgewall.org/), [openproject](https://www.openproject.org/) auto-alojado
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Documentación
+
+						- archivos a la raíz: `README.md`, `INSTALL.md`, `UPGRADE.md`, `RELEASE_NOTES.md`, `CONTRIBUTING.md` ✔️
+						- carpeta docs/ -> [readthedocs.org](http://anuncios.readthedocs.io/es/latest/) ✔️
+						- comentarios en formato [JSDocs](http://usejsdoc.org/) / [JavaDocs](https://en.wikipedia.org/wiki/Javadoc) ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+					## Calidad del código
+
+					- [desarrollo guiado por pruebas](https://es.wikipedia.org/wiki/Desarrollo_guiado_por_pruebas) ✔️
+					- [revisión del código por pares](https://www.lullabot.com/articles/the-peer-review-howto-guide) ✔️
+					- [revisión automática del código](https://www.codacy.com/app/severo/anuncios) (alternativa autoalojada: [sonarqube](http://www.sonarqube.org/)) ✔️
+				</script></section>
+				<section data-markdown><script type="text/template">
+					  ## Comunicación entre contribuidores/as
+
+					- lista de correo "dev"
+					- canal IRC
+					- [página de traducción del código](https://www.transifex.com/qgis/qgis-documentation/)
+				</script></section>
+				<section data-markdown><script type="text/template">
+					  ## Comunicación con usuarios
+
+					  - lista de correo: anuncios, seguridad
+					  - canal IRC
+					  - páginas web:
+
+					    - portal, descargas ✔️
+					    - sitio de demostración ✔️
+					    - [sitio de documentación](http://anuncios.readthedocs.io/es/latest/) ✔️
+					    - [reportes de bugs](https://github.com/severo/anuncios/issues) ✔️
+					    - blog
+				</script></section>
+				<section data-markdown><script type="text/template">
+					## Hacer vivir la comunidad
+
+					Reconocer los esfuerzos de cada persona:
+					  - usuarios
+					  - desarrolladores
+					  - traductores
+					  - gráfistas
+					  - administradores
+					  - evangelizadores
+					  - PSC - project steering comitee
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Hacer vivir la comunidad
+
+						Primera reunión del proyecto "Anuncios", ¡ahora mismo!
+				</script></section>
+				<section data-markdown><script type="text/template">
+						# Preguntas
+
+						Esta presentación se puede encontrar en línea en https://rednegra.net/presentaciones/.
+				</script></section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
