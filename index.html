@@ -39,7 +39,7 @@
 				<section data-markdown><script type="text/template">
 						## Índice
 
-						1. La Entidad Certificadora Pública
+						1. Recorrido histórico
 						2. Implementación
 						3. Logros
 						4. Dificultades
@@ -150,21 +150,21 @@
 
 						- Instalación de red, equipos de red
 						- Gabinetes, servidores
-						- 2 Hardware Secutiry Modules - HSM
+						- 2 Hardware Security Modules - HSM
 
 				</script></section>
 				<section data-markdown><script type="text/template">
 						## Desarrollo e implementación de software
 
 						- Módulo de emisión de certificados: EJBCA, fuera de línea, uso de HSM
-						- Módulo firma CRL: openssl, aislado (apertura programada de la conexión), tokens
+						- Módulo firma CRL: openssl, en línea pero aislado, tokens
 						- Módulo de solicitudes: Java, PGSQL, en línea
-						- Módulo público: estático, CRL, políticas, certificado
 						- Módulo OCSP: openssl, en línea
+						- Módulo público: estático, CRL, políticas, certificado
 
 				</script></section>
 				<section data-markdown><script type="text/template">
-						## Disponibilidad el servicio
+						## Disponibilidad del servicio
 
 						- Respaldos de electricidad con generador y UPS
 						- Redundancia de los módulos de software, en particular con los dos HSM
@@ -173,7 +173,7 @@
 
 				</script></section>
 				<section data-markdown><script type="text/template">
-						## Seguridad el servicio
+						## Seguridad del servicio
 
 						- 6 niveles de acceso físico hasta servidor de firma digital
 						- Uso de HSM, con control de acceso M de N
@@ -183,10 +183,8 @@
 				<section data-markdown><script type="text/template">
 						## Registro de solicitudes
 
-						- Atención permanente en ADSIB
-						- Atención permanente en Aduana Nacional en La Paz
-						- Atención ocasional en Santa Cruz, Cochabamba, El Alto
-						- Desde 09/2016: atención en las agencias de Aduana Nacional
+						- Atención en ADSIB
+						- Atención en Aduana Nacional para sector exportador: La Paz, Santa Cruz, Cochabamba, El Alto
 
 				</script></section>
 				<section data-markdown><script type="text/template">
@@ -217,11 +215,19 @@
 				<section data-markdown><script type="text/template">
 						## Novedad del tema en Bolivia
 
-						- Varios ajustes a la normativa
+						- Hubo varios ajustes a la reglamentación
 						- Demora hasta iniciar el servicio
 						- Registro de solicitudes: lento, y sin alcance nacional
 						- Falta de reconocimiento de la PKI a nivel internacional y técnico
 						- Desconocimiento de los conceptos por parte de los usuarios
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Retos
+
+						- Apropiación de la firma digital por el Estado y la ciudadanía
+						- Seguridad jurídica para las firmas másivas
+						- Uso de firma digital en celulares
+						- Operativa de gestión de los tokens: drivers, actualización
 				</script></section>
 				<section data-markdown><script type="text/template">
 						# Perspectivas
@@ -235,6 +241,14 @@
 						- Certificación para documentos de viaje
 				</script></section>
 				<section data-markdown><script type="text/template">
+						## Facilitar el uso de la firma digital
+
+						- Agencias de registro
+						- Venta de tokens en ADSIB
+						- Simplificación del trámite de registro
+						- Sensibilización, capacitación, talleres
+				</script></section>
+				<section data-markdown><script type="text/template">
 						## Reconocimiento internacional
 
 						- Navegadores, sistemas operativos, software
@@ -246,20 +260,21 @@
 						## Servicios de gobierno electrónico
 
 						- Se requiere oferta de servicios con firma digital
-						- Proyectos de AGETIC: simplificación de trámites, usando firma digital
-						- Sistemas de pago y transferencias: Sigep, BCB, ASFI
+						- Proyectos con AGETIC: simplificación de trámites, usando firma digital
+						- Sistemas de pago y transferencias: Sigep, BCB, ASFI, Impuestos
 						- Firma de los documentos de identidad y/o viaje
 						- Complementario con interoperabilidad
 				</script></section>
 				<section data-markdown><script type="text/template">
 						## Ecosistema tecnológico favorable
 
-						- Pronto: estándares W3C para uso de firma digital con hardware en navegadores (firma, autentitación)
-						- Desarrollo por parte de ADSIB de librerías para implementación de firma digital
-						- ¿Uso de firma digital en celulares?
+						- Provisión por parte de ADSIB y Aduana de librerías para implementación de firma digital
+						- Pronto: estándares W3C para uso de firma digital con hardware en navegadores (firma, autenticación)
 				</script></section>
 				<section data-markdown><script type="text/template">
-						# Preguntas
+						# ADSIB
+
+						### Entidad certificadora pública
 
 						Más información en https://firmadigital.bo.
 				</script></section>
