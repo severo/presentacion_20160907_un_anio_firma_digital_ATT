@@ -113,12 +113,82 @@
 						| 02/2016 | Contrato de autorización entre ATT y ADSIB |
 						| 04/2016 | Actualización certificado ADSIB por ATT |
 						| 04/2016 | Emisión de certificados |
+						| 09/2016 | Convenio con Aduana Nacional para registro |
 						| 09/2016 | 450 certificados vigentes |
 				</script></section>
 				<section data-markdown><script type="text/template">
-						## Implementación
+						# Implementación de la ECP
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Elaboración documentos
 
-						
+						10 documentos para solicitar autorización para ser Entidad Certificadora:
+
+						- Políticas de certificación
+						- Declaración de prácticas de certificación
+						- Políticas de seguridad
+						- Modelo de contrato
+						- ...
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Diseño y procedimientos internos
+
+						- Planes y procedimientos de administración de la ECP
+						- Diseño técnico
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Centro de datos
+
+						- Diseño propio!
+						- Obra civil: paredes, techo, pisos, puertas, áreas funcionales
+						- Electricidad: instalación eléctrica, generador, UPS
+						- Aire acondicionado: aire centralizado, ductos, evacuación de agua
+						- Control: biometricos, cámaras, control de temperatura
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Equipamiento del centro de datos:
+
+						- instalación de red, equipos de red
+						- gabinetes, servidores
+						- 2 HSM
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Desarrollo e implementación de software
+
+						- Módulo de emisión de certificados: EJBCA, fuera de línea, uso de HSM
+						- Módulo firma CRL: openssl, aislado (apertura programada de la conexión), tokens
+						- Módulo de solicitudes: Java, PGSQL, en línea
+						- Módulo público: estático, CRL, políticas, certificado
+						- Módulo OCSP: openssl, en línea
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Disponibilidad el servicio
+
+						- respaldos de electricidad con generador y UPS
+						- redundancia de los módulos de software, en particular con los dos HSM
+						- sitio de respaldo en centro de datos de la AGETIC
+						- tres conexiones a Internet, con dos proveedores
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Seguridad el servicio
+
+						- 6 niveles de acceso físico hasta servidor de firma digital
+						- uso de HSM, con control de acceso M de N
+						- servidor de emisión de certificados fuera de línea
+
+				</script></section>
+				<section data-markdown><script type="text/template">
+						## Registro de solicitudes
+
+						- Atención permanente en ADSIB
+						- Atención permanente en Aduana Nacional en La Paz
+						- Atención ocasional en Santa Cruz, Cochabamba, El Alto
+						- Desde 09/2016: atención en las agencias de Aduana Nacional
 
 				</script></section>
 				<section data-markdown><script type="text/template">
